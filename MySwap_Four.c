@@ -1,0 +1,35 @@
+///////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+//////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+
+void MySwap(int *, int *);
+
+//////////////////////////////////////////////////////////////////////
+
+int main()
+{
+	int iNo1;	
+	int iNo2;
+	
+	printf("Enter two numbers to be SWAPPED: \t");
+	scanf("%d%d", &iNo1, &iNo2);
+
+	MySwap(&iNo1, &iNo2);
+	
+	printf("After swap values are:\n\tiNo1 = %d\n\tiNo2 = %d\n", iNo1, iNo2);
+
+	return 0;
+}
+
+void MySwap(int *ipNo1, int *ipNo2)
+{
+	int iTemp;
+	
+	iTemp = *ipNo2;
+	*ipNo2 = *ipNo1;
+	*ipNo1 = iTemp;	
+}
